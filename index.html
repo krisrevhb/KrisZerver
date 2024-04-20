@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cihuyy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="icon" href="/iconweb.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/iconweb.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Background Animation Text --!>
+
+    <!-- Profile -->
+    <img class="my-photo" src="ssstik.io_1710674714714.jpeg">
+    <h1>KrisZerver</h1>
+  <p>doain jadi Taruna cuy</p>
+
+
+    <!-- Link List -->
+    <ul class="links">
+        <li>
+            <a href="https://tiktok.com/@kriszerver4" target="_blank" class="link-card">
+                <div class="link-icon">
+                      <img src="tiktoklogo.png" alt=tiktoklogo.png class="card-icon">
+                </div>
+                <p class="link-text">Tiktok</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+    </ul>
+
+     <ul class="links">
+        <li>
+             <a href="https://www.instagram.com/kriszerver_" target="_blank" class="link-card">
+                <div class="link-icon">
+                      <img src="iglogo.png" alt=iglogo.png class="card-icon">
+                </div>
+                <p class="link-text">Instagram</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+     </ul>
+    
+     <ul class="links">
+        <li>
+            <a href="https://www.youtube.com/@Krisnrry" target="_blank" class="link-card">
+                <div class="link-icon">
+                      <img src="ytlogo.png" alt=ytlogo.png class="card-icon">
+                </div>
+                <p class="link-text">Youtube</p>
+                <div class="link-action">
+                    <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+    </ul>
+    
+    <ul class="links">
+        <li>
+            <a href="https://sociabuzz.com/krisrevhb" target="_blank" class="link-card">
+                <div class="link-icon">
+                     <img src="sociabuzz.jpeg" alt=sociabuzz.jpeg class="card-icon">
+                </div>
+                <p class="link-text">donate</p>
+                <div class="link-action">
+                   <i class="ph-fill ph-copy"></i>
+                </div>
+            </a>
+        </li>
+    </ul>
+    
+ <footer class="github-footer">
+    <div class="container">
+        <div class="footer-left">
+            <p>&copy; 2024 KrisZerver.</p>
+        </div>
+        <div class="footer-right">
+            <nav>
+                <a href="mailto:kriszervernext@gmail.com">Kontak</a>
+                <a href="#" class="status-menu">Tentang</a>
+                <a href="#" class="help-menu">Saran</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+    <!-- Toast Notification -->
+    <div id="toast">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const statusMenu = document.querySelector('.status-menu');
+    const helpMenu = document.querySelector('.help-menu');
+
+    const showNotification = (message) => {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '10px';
+        notification.style.left = '50%';
+        notification.style.transform = 'translateX(-50%)';
+        notification.style.padding = '10px';
+        notification.style.color = 'white';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '9999';
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s ease-in-out';
+        
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.opacity = '1';
+        }, 50);
+
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => {
+                notification.remove();
+            }, 500);
+        }, 1500);
+    };
+
+    statusMenu.addEventListener('click', () => {
+        showNotification('layanan belum tersedia');
+    });
+
+    helpMenu.addEventListener('click', () => {
+        showNotification('layanan belum tersedia');
+    });
+});
+
+</script>
+
+</html>
