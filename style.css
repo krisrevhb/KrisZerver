@@ -123,6 +123,11 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);;
   color: black;
 }
 
+.info {
+  text-align: center;
+  color: #666;
+}
+
 .link-action {
   color: #8787a3;
   cursor: pointer;
